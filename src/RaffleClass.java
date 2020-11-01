@@ -1,11 +1,24 @@
 import java.util.ArrayList;
 
 public class RaffleClass {
-    int ownedRaffleNums;  // Create a class attribute
+    private int ownedRaffleNum;
 
-    // Create a class constructor for the MyClass class
+
     public RaffleClass(int raffleNum) {
-        ownedRaffleNums = raffleNum;  // Set the initial value for the class attribute x
+        this.ownedRaffleNum = raffleNum;
+    }
+
+    public RaffleClass() {
+    }
+
+    public int updateOwnedNum(int raffleNum){
+        this.ownedRaffleNum = raffleNum;
+        return this.ownedRaffleNum;
+    }
+
+    public boolean checkNum(int drawnNum){
+        if( drawnNum == this.ownedRaffleNum) return true;
+        else return false;
     }
 
 }
