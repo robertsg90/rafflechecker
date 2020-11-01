@@ -11,9 +11,13 @@ public class RaffleChecker {
             switch (menuChoice) {
                 case 1:
                     System.out.println("Enter your raffle Number:");
+                    raffleobj.updateOwnedNum(menuScanner.nextInt());
                     break;
                 case 2:
                     System.out.println("Enter raffle number to check:");
+                    if(raffleobj.checkNum(menuScanner.nextInt())){
+                        System.out.println("Winner!");
+                    }else System.out.println("Sorry you did not win.");
                     break;
                 default:
                     break;
